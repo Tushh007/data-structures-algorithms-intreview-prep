@@ -27,7 +27,7 @@ const KMPSearch = (text, pattern) => {
     // if there are mismatches during the comparison
     // 1. if the jth pointer is not at the 0th index of the pattern, jth pointer resets to lps[j - 1]
     // 2. if the jth pointer is at the 0th index of the pattern, ith pointer is incremented
-    if (text[i] != pattern[j]) {
+    if (text[i] !== pattern[j]) {
       if (j !== 0) {
         j = lps[j - 1];
       } else {
@@ -60,7 +60,6 @@ const computeLPSArray = (pattern, N) => {
       if (len !== 0) {
         len = lps[len - 1];
       } else {
-        lps[i] = 0;
         i += 1;
       }
     }
